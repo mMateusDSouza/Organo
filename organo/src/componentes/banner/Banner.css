@@ -1,4 +1,7 @@
 .banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #6278F7;
     text-align: 100%;
 }
