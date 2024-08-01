@@ -13,7 +13,6 @@ const Formulario = (props) => {
 
     const aoSalvar = (event) => {
         event.preventDefault()
-        console.log('Formulario foi submetido =>', nome, cargo, imagem, time)
         props.aoColaboradorCadastrado({
             nome, 
             cargo,
