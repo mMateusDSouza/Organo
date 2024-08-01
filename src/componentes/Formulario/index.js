@@ -20,6 +20,10 @@ const Formulario = (props) => {
             imagem,
             time
         })
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
     }
 
     return (
@@ -36,7 +40,7 @@ const Formulario = (props) => {
                 />
                 <CampoTexto label="Cargo" placeholder="Digite seu cargo" tipo="text" obrigatorio={true} valor={cargo} aoAlterado={valor => setCargo(valor)}/>
                 <CampoTexto label="Imagem" placeholder="Digite o endereço da imagem" tipo="url" obrigatorio={true} valor={imagem} aoAlterado={valor => setImagem(valor)}/>
-                <ListaSuspensa label="Time" itens={props.times} obrigatorio={true} valor={props.ntime} aoAlterado={valor => setTime(valor)} />
+                <ListaSuspensa label="Time" itens={props.times} obrigatorio={true} valor={props.time} aoAlterado={valor => setTime(valor)} />
                 <Botao>
                     Criar Card
                 </Botao>

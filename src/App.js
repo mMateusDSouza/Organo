@@ -4,6 +4,7 @@ import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';
 
 
+
 function App() {
 
   const times = [
@@ -24,7 +25,7 @@ function App() {
     },
     {
       nome: 'Devops',
-      corPrimaria: '#F0F8E2',
+      corPrimaria: '#E06B69',
       corSecundaria: '#FDE7E8'
     },
     {
@@ -46,7 +47,7 @@ function App() {
   const [colaboradores, setColaboradores] = useState([])
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
-    console.log(colaborador)
+    debugger
     setColaboradores([...colaboradores, colaborador])
   }
   
@@ -60,9 +61,10 @@ function App() {
           key={time.nome} 
           corPrimaria={time.corPrimaria} 
           corSecundaria={time.corSecundaria}
-          colaboradores={colaboradores}
-          />)}
-    
+          colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+        />
+      )}
+      
     </div>
       
   );
